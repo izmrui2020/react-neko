@@ -1,22 +1,24 @@
 .core_title {
+  color: white;
   font-family: "Playball", cursive;
   font-weight: normal;
   text-align: center;
 }
 .core_signUp {
+  color: white;
   display: flex;
   flex-direction: column;
 }
 
 .core_text {
-  color: rgb(6, 153, 211);
+  color: rgb(246, 247, 248);
   text-align: center;
   cursor: pointer;
 }
 .core_header {
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: #252830;
   padding: 20px;
   border-bottom: 1px solid lightgray;
   object-fit: contain;
@@ -26,10 +28,9 @@
 }
 .core_btnModal {
   background-color: transparent;
-  color: gray;
+  color: white;
   padding-top: 3px;
   font-size: 32px;
-  border: none;
   outline: none;
   cursor: pointer;
 }

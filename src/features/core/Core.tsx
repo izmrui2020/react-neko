@@ -14,8 +14,6 @@ import {
   CircularProgress,
 } from "@material-ui/core";
 
-import { MdAddAPhoto } from "react-icons/md";
-
 import {
   editNickname,
   selectProfile,
@@ -102,7 +100,7 @@ const Core: React.FC = () => {
       <EditProfile />
       <NewPost />
       <div className={styles.core_header}>
-        <h1 className={styles.core_title}>SNS clone</h1>
+        <h1 className={styles.core_title}>猫広場</h1>
         {profile?.nickName ? (
           <>
             <button
@@ -111,8 +109,7 @@ const Core: React.FC = () => {
                 dispatch(setOpenNewPost());
                 dispatch(resetOpenProfile());
               }}
-            >
-              <MdAddAPhoto />
+            >新規投稿する。
             </button>
             <div className={styles.core_logout}>
               {(isLoadingPost || isLoadingAuth) && <CircularProgress />}
@@ -125,7 +122,7 @@ const Core: React.FC = () => {
                   dispatch(setOpenSignIn());
                 }}
               >
-                Logout
+                ログアウト
               </Button>
               <button
                 className={styles.core_btnModal}
