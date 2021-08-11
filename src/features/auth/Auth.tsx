@@ -29,7 +29,7 @@ import {
 
 const customStyles = {
   overlay: {
-    backgroundColor: "#777777",
+    backgroundColor: "#252830",
   },
   content: {
     top: "55%",

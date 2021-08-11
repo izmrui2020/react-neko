@@ -1,7 +1,6 @@
 .core_title {
   color: white;
   font-family: "Playball", cursive;
-  font-weight: normal;
   text-align: center;
 }
 .core_signUp {
@@ -31,6 +30,16 @@
   color: white;
   padding-top: 3px;
   font-size: 32px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.core_btnModal_post {
+  background-color: transparent;
+  color: white;
+  padding-top: 3px;
+  font-size: 32px;
   outline: none;
   cursor: pointer;
 }
@@ -39,6 +48,7 @@
   display: flex;
   justify-content: flex-end;
 }
+
 .core_posts {
   padding: 20px;
 }

@@ -104,7 +104,7 @@ const Core: React.FC = () => {
         {profile?.nickName ? (
           <>
             <button
-              className={styles.core_btnModal}
+              className={styles.core_btnModal_post}
               onClick={() => {
                 dispatch(setOpenNewPost());
                 dispatch(resetOpenProfile());
@@ -112,18 +112,21 @@ const Core: React.FC = () => {
             >新規投稿する。
             </button>
             <div className={styles.core_logout}>
-              {(isLoadingPost || isLoadingAuth) && <CircularProgress />}
-              <Button
-                onClick={() => {
-                  localStorage.removeItem("localJWT");
-                  dispatch(editNickname(""));
-                  dispatch(resetOpenProfile());
-                  dispatch(resetOpenNewPost());
-                  dispatch(setOpenSignIn());
-                }}
-              >
-                ログアウト
-              </Button>
+              <div className={styles.core_logoutbutton}>
+                {(isLoadingPost || isLoadingAuth) && <CircularProgress />}
+                <Button variant="contained"
+                color="primary" size="medium"
+                  onClick={() => {
+                    localStorage.removeItem("localJWT");
+                    dispatch(editNickname(""));
+                    dispatch(resetOpenProfile());
+                    dispatch(resetOpenNewPost());
+                    dispatch(setOpenSignIn());
+                  }}
+                >
+                  ログアウト
+                </Button>
+              </div>
               <button
                 className={styles.core_btnModal}
                 onClick={() => {
@@ -146,7 +149,8 @@ const Core: React.FC = () => {
           </>
         ) : (
           <div>
-            <Button
+            <Button variant="contained"
+                color="primary" size="medium"
               onClick={() => {
                 dispatch(setOpenSignIn());
                 dispatch(resetOpenSignUp());
@@ -154,7 +158,8 @@ const Core: React.FC = () => {
             >
               LogIn
             </Button>
-            <Button
+            <Button variant="contained"
+                color="primary" size="medium"
               onClick={() => {
                 dispatch(setOpenSignUp());
                 dispatch(resetOpenSignIn());
